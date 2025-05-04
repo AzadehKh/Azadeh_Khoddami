@@ -1,5 +1,8 @@
-# Final version with refined titles, full activity chart, and a "Get My Own Profile" button
-refined_html = """\
+# Generate an updated clean HTML with:
+# - Hyperlinked GitHub project names
+# - Realistic-looking GitHub activity bar with labeled x-axis (months + year)
+
+html_with_realistic_bar = """\
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -75,11 +78,11 @@ refined_html = """\
       height: 100px;
       display: flex;
       align-items: flex-end;
-      gap: 5px;
+      gap: 4px;
     }
     .bar div {
       width: 12px;
-      background: #777;
+      background: #4a7ebb;
     }
     .btn {
       display: inline-block;
@@ -120,35 +123,35 @@ refined_html = """\
         <tr><th>Project</th><th>Tech Stack</th></tr>
         <tr>
           <td>
-            <a href="https://github.com/AzadehKhoddami/ClinicalDataManager" target="_blank"><strong>ClinicalDataManager</strong></a><br>
+            <a href="https://github.com/AzadehKh/ClinicalDataManager" target="_blank"><strong>ClinicalDataManager</strong></a><br>
             <span class="project-desc">Open source ASP.NET Clinical Data Management system</span>
           </td>
           <td>ASP.NET, SQL Server, JS</td>
         </tr>
         <tr>
           <td>
-            <a href="https://github.com/AzadehKhoddami/patient-matching-of-clinical-trials-using-generative-ai" target="_blank"><strong>Patient Matching AI</strong></a><br>
+            <a href="https://github.com/AzadehKh/patient-matching-of-clinical-trials-using-generative-ai" target="_blank"><strong>Patient Matching AI</strong></a><br>
             <span class="project-desc">AI-based patient matching using generative models</span>
           </td>
           <td>Python, ML, HTML</td>
         </tr>
         <tr>
           <td>
-            <a href="https://github.com/AzadehKhoddami/clinical-trials-search-app" target="_blank"><strong>Clinical Trials Search App</strong></a><br>
+            <a href="https://github.com/AzadehKh/clinical-trials-search-app" target="_blank"><strong>Clinical Trials Search App</strong></a><br>
             <span class="project-desc">Search interface for browsing public clinical trials</span>
           </td>
           <td>JavaScript, API</td>
         </tr>
         <tr>
           <td>
-            <a href="https://github.com/AzadehKhoddami/AdminLTE" target="_blank"><strong>AdminLTE Dashboard</strong></a><br>
+            <a href="https://github.com/AzadehKh/AdminLTE" target="_blank"><strong>AdminLTE Dashboard</strong></a><br>
             <span class="project-desc">Bootstrap-based UI template integration</span>
           </td>
           <td>Bootstrap, JS</td>
         </tr>
         <tr>
           <td>
-            <a href="https://github.com/AzadehKhoddami/clinicaltrialvis" target="_blank"><strong>Trial Visualization (ClinicalTrialVis)</strong></a><br>
+            <a href="https://github.com/AzadehKh/clinicaltrialvis" target="_blank"><strong>Trial Visualization (ClinicalTrialVis)</strong></a><br>
             <span class="project-desc">Frontend interface for trial status visualization</span>
           </td>
           <td>HTML, JS</td>
@@ -162,21 +165,21 @@ refined_html = """\
       <div class="section-title">Recent GitHub Activity</div>
       <div class="bar-container">
         <div class="bar">
-          <div style="height: 10px;"></div>
-          <div style="height: 30px;"></div>
-          <div style="height: 45px;"></div>
-          <div style="height: 80px;"></div>
-          <div style="height: 70px;"></div>
-          <div style="height: 100px;"></div>
-          <div style="height: 90px;"></div>
-          <div style="height: 60px;"></div>
-          <div style="height: 50px;"></div>
-          <div style="height: 40px;"></div>
-          <div style="height: 20px;"></div>
           <div style="height: 15px;"></div>
+          <div style="height: 35px;"></div>
+          <div style="height: 25px;"></div>
+          <div style="height: 60px;"></div>
+          <div style="height: 55px;"></div>
+          <div style="height: 90px;"></div>
+          <div style="height: 100px;"></div>
+          <div style="height: 70px;"></div>
+          <div style="height: 40px;"></div>
+          <div style="height: 65px;"></div>
+          <div style="height: 45px;"></div>
+          <div style="height: 30px;"></div>
         </div>
         <div class="bar-label">
-          <span>May</span><span>Jun</span><span>Jul</span><span>Aug</span><span>Sep</span><span>Oct</span><span>Nov</span><span>Dec</span><span>Jan</span><span>Feb</span><span>Mar</span><span>Apr</span>
+          <span>May '23</span><span>Jun</span><span>Jul</span><span>Aug</span><span>Sep</span><span>Oct</span><span>Nov</span><span>Dec</span><span>Jan</span><span>Feb</span><span>Mar</span><span>Apr '24</span>
         </div>
       </div>
 
@@ -201,9 +204,9 @@ refined_html = """\
 </html>
 """
 
-# Save as final clean profile HTML
-refined_html_path = "/mnt/data/index_final_professionalized.html"
-with open(refined_html_path, "w", encoding="utf-8") as f:
-    f.write(refined_html)
+# Save this to a final HTML file
+final_realistic_html_path = "/mnt/data/index_with_realistic_bar_and_links.html"
+with open(final_realistic_html_path, "w", encoding="utf-8") as f:
+    f.write(html_with_realistic_bar)
 
-refined_html_path
+final_realistic_html_path
