@@ -1,11 +1,11 @@
-# Update the HTML template to match Google Scholar layout but focus only on GitHub projects, no citations or publications
+# Generate the final version: no profile image, clickable project + social links, and real bar chart for GitHub activity
 
-projects_only_html = """\
+final_html = """\
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Azadeh Khoddami - Projects</title>
+  <title>Azadeh Khoddami - GitHub Projects</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -30,23 +30,10 @@ projects_only_html = """\
     .right {
       width: 35%;
     }
-    .profile-header {
-      display: flex;
-      align-items: center;
-      margin-bottom: 2rem;
+    .header h1 {
+      margin: 0 0 0.5em 0;
     }
-    .profile-header img {
-      border-radius: 50%;
-      width: 100px;
-      height: 100px;
-      object-fit: cover;
-      margin-right: 20px;
-    }
-    .profile-header h1 {
-      margin: 0;
-    }
-    .profile-header p {
-      margin: 4px 0;
+    .header p {
       font-size: 14px;
     }
     table {
@@ -73,21 +60,42 @@ projects_only_html = """\
     }
     ul {
       padding-left: 20px;
+      font-size: 14px;
+    }
+    .bar-container {
+      margin-top: 1em;
+      font-family: monospace;
+    }
+    .bar-label {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      margin-top: 0.2em;
+    }
+    .bar {
+      height: 80px;
+      display: flex;
+      align-items: flex-end;
+      gap: 5px;
+    }
+    .bar div {
+      width: 12px;
+      background: #777;
     }
   </style>
 </head>
 <body>
 
-  <div class="profile-header">
-    <img src="https://github.com/AzadehKhoddami.png" alt="Profile Photo">
-    <div>
-      <h1>Azadeh Khoddami</h1>
-      <p>Senior Research Developer, <a href="https://ctsdmc.org" target="_blank">CTSDMC</a><br>
-         <a href="https://www.public-health.uiowa.edu/" target="_blank">College of Public Health</a>,
-         <a href="https://uiowa.edu" target="_blank">University of Iowa</a><br>
-         Verified email at uiowa.edu</p>
-      <p><a href="https://github.com/AzadehKhoddami">GitHub</a> · <a href="#">Portfolio</a> · <a href="#">LinkedIn</a></p>
-    </div>
+  <div class="header">
+    <h1>Azadeh Khoddami</h1>
+    <p>
+      Senior Research Developer – <a href="https://ctsdmc.org" target="_blank">CTSDMC</a>,
+      <a href="https://www.public-health.uiowa.edu/" target="_blank">College of Public Health</a>,
+      <a href="https://uiowa.edu" target="_blank">University of Iowa</a><br>
+      <a href="https://github.com/AzadehKhoddami">GitHub</a> ·
+      <a href="https://www.linkedin.com/in/azadehkhoddami" target="_blank">LinkedIn</a> ·
+      <a href="https://azadehkh.github.io/profile/" target="_blank">This Site</a>
+    </p>
   </div>
 
   <div class="container">
@@ -97,35 +105,35 @@ projects_only_html = """\
         <tr><th>Project</th><th>Tech Stack</th></tr>
         <tr>
           <td>
-            <strong>ClinicalDataManager</strong><br>
+            <a href="https://github.com/AzadehKhoddami/ClinicalDataManager" target="_blank"><strong>ClinicalDataManager</strong></a><br>
             <span class="project-desc">Open source ASP.NET Clinical Data Management system</span>
           </td>
           <td>ASP.NET, SQL Server, JS</td>
         </tr>
         <tr>
           <td>
-            <strong>Patient Matching AI</strong><br>
+            <a href="https://github.com/AzadehKhoddami/patient-matching-of-clinical-trials-using-generative-ai" target="_blank"><strong>Patient Matching AI</strong></a><br>
             <span class="project-desc">AI-based patient matching using generative models</span>
           </td>
           <td>Python, ML, HTML</td>
         </tr>
         <tr>
           <td>
-            <strong>Clinical Trials Search App</strong><br>
+            <a href="https://github.com/AzadehKhoddami/clinical-trials-search-app" target="_blank"><strong>Clinical Trials Search App</strong></a><br>
             <span class="project-desc">Search interface for browsing public clinical trials</span>
           </td>
           <td>JavaScript, API</td>
         </tr>
         <tr>
           <td>
-            <strong>AdminLTE Dashboard</strong><br>
-            <span class="project-desc">Clean Bootstrap-based UI template integration</span>
+            <a href="https://github.com/AzadehKhoddami/AdminLTE" target="_blank"><strong>AdminLTE Dashboard</strong></a><br>
+            <span class="project-desc">Bootstrap-based UI template integration</span>
           </td>
           <td>Bootstrap, JS</td>
         </tr>
         <tr>
           <td>
-            <strong>Trial Visualization (ClinicalTrialVis)</strong><br>
+            <a href="https://github.com/AzadehKhoddami/clinicaltrialvis" target="_blank"><strong>Trial Visualization (ClinicalTrialVis)</strong></a><br>
             <span class="project-desc">Frontend interface for trial status visualization</span>
           </td>
           <td>HTML, JS</td>
@@ -134,20 +142,36 @@ projects_only_html = """\
     </div>
 
     <div class="right">
-      <div class="section-title">Skills & Tools</div>
+      <div class="section-title">Recent GitHub Activity</div>
+      <div class="bar-container">
+        <div class="bar">
+          <div style="height: 10px;"></div>
+          <div style="height: 30px;"></div>
+          <div style="height: 55px;"></div>
+          <div style="height: 70px;"></div>
+          <div style="height: 100px;"></div>
+          <div style="height: 80px;"></div>
+          <div style="height: 40px;"></div>
+        </div>
+        <div class="bar-label">
+          <span>Oct</span><span>Nov</span><span>Dec</span><span>Jan</span><span>Feb</span><span>Mar</span><span>Apr</span>
+        </div>
+      </div>
+
+      <div class="section-title">Tech Focus</div>
       <ul>
-        <li>Machine Learning, NLP, Causal Inference</li>
-        <li>ASP.NET Core, SQL Server, Entity Framework</li>
-        <li>Python, JavaScript, Bootstrap</li>
-        <li>GitHub, GitHub Pages, REST APIs</li>
+        <li>Machine Learning · NLP · Causal Inference</li>
+        <li>ASP.NET Core · Entity Framework · SQL</li>
+        <li>Python · JavaScript · Bootstrap</li>
+        <li>ETL Pipelines · GitHub Actions · APIs</li>
       </ul>
 
-      <div class="section-title">Focus Areas</div>
+      <div class="section-title">Interests</div>
       <ul>
-        <li>Clinical Trial Data Platforms</li>
-        <li>eHealth Solutions</li>
-        <li>AI-Driven Risk Management</li>
-        <li>Open Source & Research Tooling</li>
+        <li>Clinical Trial Tools</li>
+        <li>eHealth Data Platforms</li>
+        <li>AI for Patient Safety</li>
+        <li>Open Source & Academic Collaboration</li>
       </ul>
     </div>
   </div>
@@ -156,9 +180,9 @@ projects_only_html = """\
 </html>
 """
 
-# Save this as the updated HTML for GitHub Pages
-projects_html_path = "/mnt/data/index_github_projects_only.html"
-with open(projects_html_path, "w", encoding="utf-8") as f:
-    f.write(projects_only_html)
+# Save the final version for upload
+final_html_path = "/mnt/data/index_final_cleaned.html"
+with open(final_html_path, "w", encoding="utf-8") as f:
+    f.write(final_html)
 
-projects_html_path
+final_html_path
