@@ -1,11 +1,11 @@
-# Create a highly polished HTML page that mimics Google Scholar with links to CTSDMC, College of Public Health, and University of Iowa
+# Update the HTML template to match Google Scholar layout but focus only on GitHub projects, no citations or publications
 
-scholar_style_html = """\
+projects_only_html = """\
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Azadeh Khoddami - Profile</title>
+  <title>Azadeh Khoddami - Projects</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -60,26 +60,19 @@ scholar_style_html = """\
       border-bottom: 1px solid #ddd;
       font-size: 14px;
     }
-    .metrics {
-      margin-top: 1rem;
-    }
-    .bar-chart {
-      font-family: monospace;
-      background: #f1f3f4;
-      padding: 10px;
-      margin-top: 10px;
-      display: inline-block;
-    }
-    .coauthors {
-      font-size: 14px;
-      line-height: 1.6;
-    }
     .section-title {
       font-size: 16px;
       font-weight: bold;
       border-bottom: 1px solid #ccc;
       margin-top: 2rem;
       padding-bottom: 4px;
+    }
+    .project-desc {
+      font-size: 13px;
+      color: #555;
+    }
+    ul {
+      padding-left: 20px;
     }
   </style>
 </head>
@@ -93,43 +86,69 @@ scholar_style_html = """\
          <a href="https://www.public-health.uiowa.edu/" target="_blank">College of Public Health</a>,
          <a href="https://uiowa.edu" target="_blank">University of Iowa</a><br>
          Verified email at uiowa.edu</p>
-      <p><a href="https://github.com/AzadehKhoddami">GitHub</a> · <a href="#">Google Scholar</a> · <a href="#">LinkedIn</a></p>
+      <p><a href="https://github.com/AzadehKhoddami">GitHub</a> · <a href="#">Portfolio</a> · <a href="#">LinkedIn</a></p>
     </div>
   </div>
 
   <div class="container">
     <div class="left">
-      <div class="section-title">Selected Publications</div>
+      <div class="section-title">Highlighted GitHub Projects</div>
       <table>
-        <tr><th>Title</th><th>Cited</th><th>Year</th></tr>
-        <tr><td>Causal Interpretability for ML Problems</td><td>215</td><td>2020</td></tr>
-        <tr><td>Disinformation in Social Media</td><td>146</td><td>2020</td></tr>
-        <tr><td>Causal Inference for Time Series</td><td>94</td><td>2021</td></tr>
-        <tr><td>ShEMO: Emotion Dataset</td><td>79</td><td>2019</td></tr>
-        <tr><td>Fake News via RL</td><td>42</td><td>2022</td></tr>
-        <tr><td>Echo Chambers</td><td>24</td><td>2021</td></tr>
+        <tr><th>Project</th><th>Tech Stack</th></tr>
+        <tr>
+          <td>
+            <strong>ClinicalDataManager</strong><br>
+            <span class="project-desc">Open source ASP.NET Clinical Data Management system</span>
+          </td>
+          <td>ASP.NET, SQL Server, JS</td>
+        </tr>
+        <tr>
+          <td>
+            <strong>Patient Matching AI</strong><br>
+            <span class="project-desc">AI-based patient matching using generative models</span>
+          </td>
+          <td>Python, ML, HTML</td>
+        </tr>
+        <tr>
+          <td>
+            <strong>Clinical Trials Search App</strong><br>
+            <span class="project-desc">Search interface for browsing public clinical trials</span>
+          </td>
+          <td>JavaScript, API</td>
+        </tr>
+        <tr>
+          <td>
+            <strong>AdminLTE Dashboard</strong><br>
+            <span class="project-desc">Clean Bootstrap-based UI template integration</span>
+          </td>
+          <td>Bootstrap, JS</td>
+        </tr>
+        <tr>
+          <td>
+            <strong>Trial Visualization (ClinicalTrialVis)</strong><br>
+            <span class="project-desc">Frontend interface for trial status visualization</span>
+          </td>
+          <td>HTML, JS</td>
+        </tr>
       </table>
     </div>
 
     <div class="right">
-      <div class="section-title">Citation Metrics</div>
-      <table>
-        <tr><th>Metric</th><th>All Time</th><th>Since 2019</th></tr>
-        <tr><td>Citations</td><td>707</td><td>705</td></tr>
-        <tr><td>h-index</td><td>10</td><td>10</td></tr>
-        <tr><td>i10-index</td><td>11</td><td>11</td></tr>
-      </table>
-      <div class="bar-chart">
-        ▁▂▃▅▆██▆▃▂▁<br>
-        2020 2021 2022 2023 2024
-      </div>
+      <div class="section-title">Skills & Tools</div>
+      <ul>
+        <li>Machine Learning, NLP, Causal Inference</li>
+        <li>ASP.NET Core, SQL Server, Entity Framework</li>
+        <li>Python, JavaScript, Bootstrap</li>
+        <li>GitHub, GitHub Pages, REST APIs</li>
+      </ul>
 
-      <div class="section-title">Co-authors</div>
-      <div class="coauthors">
-        • Huan Liu – ASU<br>
-        • Raha Morafhah – UVA<br>
-        • K. Shu, P. Sheth
-      </div>
+      <div class="section-title">Focus Areas</div>
+      <ul>
+        <li>Clinical Trial Data Platforms</li>
+        <li>eHealth Solutions</li>
+        <li>AI-Driven Risk Management</li>
+        <li>Open Source & Research Tooling</li>
+      </ul>
     </div>
   </div>
 
@@ -137,9 +156,9 @@ scholar_style_html = """\
 </html>
 """
 
-# Save the HTML file
-final_html_path = "/mnt/data/index_scholar_style_final.html"
-with open(final_html_path, "w", encoding="utf-8") as f:
-    f.write(scholar_style_html)
+# Save this as the updated HTML for GitHub Pages
+projects_html_path = "/mnt/data/index_github_projects_only.html"
+with open(projects_html_path, "w", encoding="utf-8") as f:
+    f.write(projects_only_html)
 
-final_html_path
+projects_html_path
