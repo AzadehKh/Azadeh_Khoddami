@@ -1,102 +1,145 @@
+# Create a highly polished HTML page that mimics Google Scholar with links to CTSDMC, College of Public Health, and University of Iowa
+
+scholar_style_html = """\
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Azadeh Khoddami – Scholar Profile</title>
+  <title>Azadeh Khoddami - Profile</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      margin: 2em auto;
-      max-width: 1000px;
-      line-height: 1.6;
-      color: #333;
-    }
-    h1, h2 {
+      margin: 0 auto;
+      max-width: 1100px;
+      background: #fff;
       color: #202124;
+      padding: 2rem;
     }
-    .profile {
+    a {
+      color: #1a0dab;
+      text-decoration: none;
+    }
+    .container {
       display: flex;
-      align-items: center;
-      gap: 20px;
-    }
-    .profile img {
-      border-radius: 50%;
-      width: 100px;
-    }
-    .columns {
-      display: flex;
-      margin-top: 2em;
+      flex-direction: row;
       gap: 40px;
     }
-    .left, .right {
-      flex: 1;
+    .left {
+      width: 65%;
+    }
+    .right {
+      width: 35%;
+    }
+    .profile-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 2rem;
+    }
+    .profile-header img {
+      border-radius: 50%;
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      margin-right: 20px;
+    }
+    .profile-header h1 {
+      margin: 0;
+    }
+    .profile-header p {
+      margin: 4px 0;
+      font-size: 14px;
     }
     table {
-      width: 100%;
       border-collapse: collapse;
-      margin-top: 1em;
-    }
-    table, th, td {
-      border: 1px solid #ccc;
+      width: 100%;
+      margin: 1rem 0;
     }
     th, td {
-      padding: 8px;
       text-align: left;
+      padding: 8px;
+      border-bottom: 1px solid #ddd;
+      font-size: 14px;
     }
-    .bar {
+    .metrics {
+      margin-top: 1rem;
+    }
+    .bar-chart {
       font-family: monospace;
-      white-space: pre;
-      margin-top: 1em;
+      background: #f1f3f4;
+      padding: 10px;
+      margin-top: 10px;
+      display: inline-block;
+    }
+    .coauthors {
+      font-size: 14px;
+      line-height: 1.6;
+    }
+    .section-title {
+      font-size: 16px;
+      font-weight: bold;
+      border-bottom: 1px solid #ccc;
+      margin-top: 2rem;
+      padding-bottom: 4px;
     }
   </style>
 </head>
 <body>
 
-  <div class="profile">
-    <img src="https://github.com/AzadehKhoddami.png" alt="Profile photo">
+  <div class="profile-header">
+    <img src="https://github.com/AzadehKhoddami.png" alt="Profile Photo">
     <div>
       <h1>Azadeh Khoddami</h1>
-      <p><strong>Senior Research Developer</strong><br>
-      AI in Clinical Trials · Causal Inference · Health Data Science</p>
-      <p><a href="#">GitHub</a> · <a href="#">Google Scholar</a> · <a href="#">LinkedIn</a></p>
+      <p>Senior Research Developer, <a href="https://ctsdmc.org" target="_blank">CTSDMC</a><br>
+         <a href="https://www.public-health.uiowa.edu/" target="_blank">College of Public Health</a>,
+         <a href="https://uiowa.edu" target="_blank">University of Iowa</a><br>
+         Verified email at uiowa.edu</p>
+      <p><a href="https://github.com/AzadehKhoddami">GitHub</a> · <a href="#">Google Scholar</a> · <a href="#">LinkedIn</a></p>
     </div>
   </div>
 
-  <div class="columns">
+  <div class="container">
     <div class="left">
-      <h2>Selected Publications</h2>
+      <div class="section-title">Selected Publications</div>
       <table>
         <tr><th>Title</th><th>Cited</th><th>Year</th></tr>
         <tr><td>Causal Interpretability for ML Problems</td><td>215</td><td>2020</td></tr>
-        <tr><td>Combating Disinformation in Social Media</td><td>146</td><td>2020</td></tr>
+        <tr><td>Disinformation in Social Media</td><td>146</td><td>2020</td></tr>
         <tr><td>Causal Inference for Time Series</td><td>94</td><td>2021</td></tr>
-        <tr><td>ShEMO: Speech Emotion Dataset</td><td>79</td><td>2019</td></tr>
-        <tr><td>Adaptive Fake News via RL</td><td>42</td><td>2022</td></tr>
-        <tr><td>Echo Chambers & Misinformation</td><td>24</td><td>2021</td></tr>
+        <tr><td>ShEMO: Emotion Dataset</td><td>79</td><td>2019</td></tr>
+        <tr><td>Fake News via RL</td><td>42</td><td>2022</td></tr>
+        <tr><td>Echo Chambers</td><td>24</td><td>2021</td></tr>
       </table>
     </div>
 
     <div class="right">
-      <h2>Citation Metrics</h2>
+      <div class="section-title">Citation Metrics</div>
       <table>
         <tr><th>Metric</th><th>All Time</th><th>Since 2019</th></tr>
         <tr><td>Citations</td><td>707</td><td>705</td></tr>
         <tr><td>h-index</td><td>10</td><td>10</td></tr>
         <tr><td>i10-index</td><td>11</td><td>11</td></tr>
       </table>
-      <div class="bar">
-        ▁▁▂▂▅▆██▆▃▂▁  
+      <div class="bar-chart">
+        ▁▂▃▅▆██▆▃▂▁<br>
         2020 2021 2022 2023 2024
       </div>
 
-      <h2>Co-authors</h2>
-      <ul>
-        <li>Huan Liu — ASU</li>
-        <li>Raha Morafhah — UVA</li>
-        <li>K. Shu, P. Sheth</li>
-      </ul>
+      <div class="section-title">Co-authors</div>
+      <div class="coauthors">
+        • Huan Liu – ASU<br>
+        • Raha Morafhah – UVA<br>
+        • K. Shu, P. Sheth
+      </div>
     </div>
   </div>
 
 </body>
 </html>
+"""
+
+# Save the HTML file
+final_html_path = "/mnt/data/index_scholar_style_final.html"
+with open(final_html_path, "w", encoding="utf-8") as f:
+    f.write(scholar_style_html)
+
+final_html_path
