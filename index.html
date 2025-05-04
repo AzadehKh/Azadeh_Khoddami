@@ -1,131 +1,144 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Azadeh Khoddami – GitHub Profile</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 40px;
-            background-color: #fff;
-            color: #000;
-        }
-        h1 {
-            font-size: 2em;
-            margin-bottom: 0;
-        }
-        h2 {
-            margin-top: 40px;
-        }
-        a {
-            color: #0000cc;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        .header, .section {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-        }
-        .left-col, .right-col {
-            width: 48%;
-        }
-        .project-table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        .project-table th, .project-table td {
-            text-align: left;
-            padding: 6px 4px;
-            border-bottom: 1px solid #ccc;
-        }
-        .button {
-            padding: 6px 12px;
-            background-color: white;
-            border: 1px solid #0000cc;
-            color: #0000cc;
-            border-radius: 4px;
-            cursor: pointer;
-            font-weight: bold;
-        }
-        .button:hover {
-            background-color: #f0f0ff;
-        }
-        .activity-img {
-            width: 100%;
-            max-width: 480px;
-            margin-top: 8px;
-        }
-        .bullet-section {
-            margin-top: 20px;
-        }
-        .bullet-section ul {
-            padding-left: 20px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>Azadeh Khoddami</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      color: #222;
+    }
+    h1 {
+      font-size: 32px;
+    }
+    .container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+    .left-column, .right-column {
+      width: 48%;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+    th, td {
+      text-align: left;
+      padding: 8px;
+      border-bottom: 1px solid #ccc;
+    }
+    th {
+      background-color: #f9f9f9;
+    }
+    a {
+      color: #0000cc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .section-title {
+      font-size: 20px;
+      font-weight: bold;
+      margin-top: 40px;
+    }
+    .button {
+      float: right;
+      padding: 6px 12px;
+      border: 1px solid #0000cc;
+      color: #0000cc;
+      background-color: #fff;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .button:hover {
+      background-color: #f0f0f0;
+    }
+    .tech-columns {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+    }
+    .tech-column {
+      width: 48%;
+    }
+  </style>
 </head>
 <body>
+  <a href="#" class="button">Get My Own Profile</a>
 
-    <div class="header">
-        <div class="left-col">
-            <h1>Azadeh Khoddami</h1>
-            <p>Senior Research Developer – <a href="https://ctsdmc.public-health.uiowa.edu" target="_blank">CTSDMC</a>, <a href="https://www.public-health.uiowa.edu/" target="_blank">College of Public Health, University of Iowa</a></p>
-            <p>
-                <a href="https://github.com/AzadehKh" target="_blank">GitHub</a> ·
-                <a href="https://www.linkedin.com/in/azadehkh/" target="_blank">LinkedIn</a> ·
-                <a href="https://azadehkh.github.io/profile/" target="_blank">This Site</a>
-            </p>
-        </div>
-        <div class="right-col" style="text-align: right;">
-            <a class="button" href="https://github.com/join" target="_blank">Get My Own Profile</a>
-        </div>
+  <h1>Azadeh Khoddami</h1>
+  <p>Senior Research Developer – <a href="https://ctsdmc.public-health.uiowa.edu/">CTSDMC</a>, <a href="https://www.public-health.uiowa.edu/">College of Public Health, University of Iowa</a></p>
+  <p>
+    <a href="https://github.com/AzadehKh">GitHub</a> · 
+    <a href="https://www.linkedin.com/in/azadehkh/">LinkedIn</a> · 
+    <a href="https://azadehkh.github.io/profile">This Site</a>
+  </p>
+
+  <div class="container">
+    <div class="left-column">
+      <div class="section-title">Highlighted GitHub Projects</div>
+      <table>
+        <tr><th>Project</th><th>Tech Stack</th></tr>
+        <tr>
+          <td><a href="https://github.com/AzadehKh/ClinicalDataManager"><strong>ClinicalDataManager</strong></a><br>Open source ASP.NET Clinical Data Management system</td>
+          <td>ASP.NET, SQL Server, JS</td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/AzadehKh/patient-matching-of-clinical-trials-using-generative-ai"><strong>Patient Matching AI</strong></a><br>AI-based patient matching using generative models</td>
+          <td>Python, ML, HTML</td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/AzadehKh/clinical-trials-search-app"><strong>Clinical Trials Search App</strong></a><br>Search interface for browsing public clinical trials</td>
+          <td>JavaScript, API</td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/AzadehKh/AdminLTE"><strong>AdminLTE Dashboard</strong></a><br>Bootstrap-based UI template integration</td>
+          <td>Bootstrap, JS</td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/AzadehKh/clinicaltrialvis"><strong>Trial Visualization (ClinicalTrialVis)</strong></a><br>Frontend interface for trial status visualization</td>
+          <td>HTML, JS</td>
+        </tr>
+      </table>
     </div>
 
-    <h2>Highlighted GitHub Projects</h2>
-    <div class="section">
-        <div class="left-col">
-            <table class="project-table">
-                <tr><th>Project</th><th>Tech Stack</th></tr>
-                <tr>
-                    <td><a href="https://github.com/AzadehKh/ClinicalDataManager" target="_blank"><b>ClinicalDataManager</b></a><br>Open source ASP.NET Clinical Data Management system</td>
-                    <td>ASP.NET, SQL Server, JS</td>
-                </tr>
-                <tr>
-                    <td><a href="https://github.com/AzadehKh/patient-matching-of-clinical-trials-using-generative-ai" target="_blank"><b>Patient Matching AI</b></a><br>AI-based patient matching using generative models</td>
-                    <td>Python, ML, HTML</td>
-                </tr>
-                <tr>
-                    <td><a href="https://github.com/AzadehKh/clinical-trials-search-app" target="_blank"><b>Clinical Trials Search App</b></a><br>Search interface for browsing public clinical trials</td>
-                    <td>JavaScript, API</td>
-                </tr>
-                <tr>
-                    <td><a href="https://github.com/AzadehKh/AdminLTE" target="_blank"><b>AdminLTE Dashboard</b></a><br>Bootstrap-based UI template integration</td>
-                    <td>Bootstrap, JS</td>
-                </tr>
-                <tr>
-                    <td><a href="https://github.com/AzadehKh/clinicaltrialvis" target="_blank"><b>Trial Visualization (ClinicalTrialVis)</b></a><br>Frontend interface for trial status visualization</td>
-                    <td>HTML, JS</td>
-                </tr>
-            </table>
-        </div>
-        <div class="right-col">
-            <h3>Recent GitHub Activity</h3>
-            <img src="github_activity_realistic.png" alt="GitHub Activity Bar" class="activity-img">
+    <div class="right-column">
+      <div class="section-title">Recent GitHub Activity</div>
+      <img src="github_activity_realistic.png" alt="GitHub Activity Bar" style="width: 100%; max-width: 500px;" />
 
-            <div class="bullet-section">
-                <h3>Project Availability</h3>
-                <ul>
-                    <li>All GitHub projects listed here are <b>publicly accessible</b>.</li>
-                    <li>Each repository includes <b>live code</b>, documentation, and sample data where applicable.</li>
-                    <li>Forks were adapted to match clinical research needs, with additional scripts and UI improvements.</li>
-                </ul>
-            </div>
+      <div class="section-title">Project Availability</div>
+      <ul>
+        <li>All GitHub projects listed here are <strong>publicly accessible</strong>.</li>
+        <li>Each repository includes <strong>live code</strong>, documentation, and sample data where applicable.</li>
+        <li>Forks were adapted to match clinical research needs, with added utility scripts and UI improvements.</li>
+      </ul>
+
+      <div class="tech-columns">
+        <div class="tech-column">
+          <div class="section-title">Technical Expertise</div>
+          <ul>
+            <li>Machine Learning · NLP · Causal Inference</li>
+            <li>ASP.NET Core · Entity Framework · SQL</li>
+            <li>Python · JavaScript · Bootstrap</li>
+            <li>ETL Pipelines · GitHub Actions · APIs</li>
+          </ul>
         </div>
+        <div class="tech-column">
+          <div class="section-title">Development Focus Areas</div>
+          <ul>
+            <li>Clinical Trial Platforms & eHealth Systems</li>
+            <li>AI for Patient Safety and Risk Reduction</li>
+            <li>Academic & Open-Source Integration</li>
+          </ul>
+        </div>
+      </div>
     </div>
-
+  </div>
 </body>
 </html>
