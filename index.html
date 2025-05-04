@@ -1,6 +1,5 @@
-# Generate the final version: no profile image, clickable project + social links, and real bar chart for GitHub activity
-
-final_html = """\
+# Final version with refined titles, full activity chart, and a "Get My Own Profile" button
+refined_html = """\
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -73,7 +72,7 @@ final_html = """\
       margin-top: 0.2em;
     }
     .bar {
-      height: 80px;
+      height: 100px;
       display: flex;
       align-items: flex-end;
       gap: 5px;
@@ -81,6 +80,22 @@ final_html = """\
     .bar div {
       width: 12px;
       background: #777;
+    }
+    .btn {
+      display: inline-block;
+      padding: 6px 10px;
+      background: #fff;
+      color: #1a0dab;
+      border: 1px solid #1a0dab;
+      border-radius: 4px;
+      font-size: 13px;
+      text-align: center;
+      text-decoration: none;
+      margin-bottom: 1rem;
+    }
+    .btn:hover {
+      background: #1a0dab;
+      color: white;
     }
   </style>
 </head>
@@ -142,23 +157,30 @@ final_html = """\
     </div>
 
     <div class="right">
+      <a href="https://docs.github.com/en/pages/getting-started-with-github-pages" class="btn" target="_blank">Get My Own Profile</a>
+
       <div class="section-title">Recent GitHub Activity</div>
       <div class="bar-container">
         <div class="bar">
           <div style="height: 10px;"></div>
           <div style="height: 30px;"></div>
-          <div style="height: 55px;"></div>
+          <div style="height: 45px;"></div>
+          <div style="height: 80px;"></div>
           <div style="height: 70px;"></div>
           <div style="height: 100px;"></div>
-          <div style="height: 80px;"></div>
+          <div style="height: 90px;"></div>
+          <div style="height: 60px;"></div>
+          <div style="height: 50px;"></div>
           <div style="height: 40px;"></div>
+          <div style="height: 20px;"></div>
+          <div style="height: 15px;"></div>
         </div>
         <div class="bar-label">
-          <span>Oct</span><span>Nov</span><span>Dec</span><span>Jan</span><span>Feb</span><span>Mar</span><span>Apr</span>
+          <span>May</span><span>Jun</span><span>Jul</span><span>Aug</span><span>Sep</span><span>Oct</span><span>Nov</span><span>Dec</span><span>Jan</span><span>Feb</span><span>Mar</span><span>Apr</span>
         </div>
       </div>
 
-      <div class="section-title">Tech Focus</div>
+      <div class="section-title">Technical Expertise</div>
       <ul>
         <li>Machine Learning · NLP · Causal Inference</li>
         <li>ASP.NET Core · Entity Framework · SQL</li>
@@ -166,12 +188,11 @@ final_html = """\
         <li>ETL Pipelines · GitHub Actions · APIs</li>
       </ul>
 
-      <div class="section-title">Interests</div>
+      <div class="section-title">Development Focus Areas</div>
       <ul>
-        <li>Clinical Trial Tools</li>
-        <li>eHealth Data Platforms</li>
-        <li>AI for Patient Safety</li>
-        <li>Open Source & Academic Collaboration</li>
+        <li>Clinical Trial Platforms & eHealth Systems</li>
+        <li>AI for Patient Safety and Risk Reduction</li>
+        <li>Academic & Open-Source Integration</li>
       </ul>
     </div>
   </div>
@@ -180,9 +201,9 @@ final_html = """\
 </html>
 """
 
-# Save the final version for upload
-final_html_path = "/mnt/data/index_final_cleaned.html"
-with open(final_html_path, "w", encoding="utf-8") as f:
-    f.write(final_html)
+# Save as final clean profile HTML
+refined_html_path = "/mnt/data/index_final_professionalized.html"
+with open(refined_html_path, "w", encoding="utf-8") as f:
+    f.write(refined_html)
 
-final_html_path
+refined_html_path
