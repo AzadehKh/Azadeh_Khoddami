@@ -1,8 +1,4 @@
-# Generate an updated clean HTML with:
-# - Hyperlinked GitHub project names
-# - Realistic-looking GitHub activity bar with labeled x-axis (months + year)
-
-html_with_realistic_bar = """\
+updated_html_with_years = """\
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -72,16 +68,16 @@ html_with_realistic_bar = """\
       display: flex;
       justify-content: space-between;
       font-size: 12px;
-      margin-top: 0.2em;
+      margin-top: 0.4em;
     }
     .bar {
       height: 100px;
       display: flex;
       align-items: flex-end;
-      gap: 4px;
+      gap: 3px;
     }
     .bar div {
-      width: 12px;
+      width: 8px;
       background: #4a7ebb;
     }
     .btn {
@@ -166,20 +162,24 @@ html_with_realistic_bar = """\
       <div class="bar-container">
         <div class="bar">
           <div style="height: 15px;"></div>
-          <div style="height: 35px;"></div>
           <div style="height: 25px;"></div>
-          <div style="height: 60px;"></div>
-          <div style="height: 55px;"></div>
-          <div style="height: 90px;"></div>
-          <div style="height: 100px;"></div>
-          <div style="height: 70px;"></div>
-          <div style="height: 40px;"></div>
-          <div style="height: 65px;"></div>
           <div style="height: 45px;"></div>
+          <div style="height: 65px;"></div>
+          <div style="height: 80px;"></div>
+          <div style="height: 95px;"></div>
+          <div style="height: 60px;"></div>
+          <div style="height: 40px;"></div>
+          <div style="height: 50px;"></div>
           <div style="height: 30px;"></div>
+          <div style="height: 70px;"></div>
+          <div style="height: 55px;"></div>
+          <div style="height: 75px;"></div>
+          <div style="height: 88px;"></div>
+          <div style="height: 95px;"></div>
+          <div style="height: 45px;"></div>
         </div>
         <div class="bar-label">
-          <span>May '23</span><span>Jun</span><span>Jul</span><span>Aug</span><span>Sep</span><span>Oct</span><span>Nov</span><span>Dec</span><span>Jan</span><span>Feb</span><span>Mar</span><span>Apr '24</span>
+          <span>2021</span><span>2022</span><span>2023</span><span>2024</span><span>2025</span>
         </div>
       </div>
 
@@ -204,9 +204,3 @@ html_with_realistic_bar = """\
 </html>
 """
 
-# Save this to a final HTML file
-final_realistic_html_path = "/mnt/data/index_with_realistic_bar_and_links.html"
-with open(final_realistic_html_path, "w", encoding="utf-8") as f:
-    f.write(html_with_realistic_bar)
-
-final_realistic_html_path
