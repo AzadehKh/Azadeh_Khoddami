@@ -1,144 +1,122 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Azadeh Khoddami</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 40px;
-      color: #222;
-    }
-    h1 {
-      font-size: 32px;
-    }
-    .container {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: flex-start;
-    }
-    .left-column, .right-column {
-      width: 48%;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 10px;
-    }
-    th, td {
-      text-align: left;
-      padding: 8px;
-      border-bottom: 1px solid #ccc;
-    }
-    th {
-      background-color: #f9f9f9;
-    }
-    a {
-      color: #0000cc;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    .section-title {
-      font-size: 20px;
-      font-weight: bold;
-      margin-top: 40px;
-    }
-    .button {
-      float: right;
-      padding: 6px 12px;
-      border: 1px solid #0000cc;
-      color: #0000cc;
-      background-color: #fff;
-      border-radius: 5px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .button:hover {
-      background-color: #f0f0f0;
-    }
-    .tech-columns {
-      display: flex;
-      justify-content: space-between;
-      margin-top: 20px;
-    }
-    .tech-column {
-      width: 48%;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <title>Azadeh Khoddami</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 40px;
+            display: flex;
+            justify-content: center;
+            background: #fff;
+        }
+        .container {
+            max-width: 1000px;
+            width: 100%;
+        }
+        h1 {
+            font-size: 28px;
+        }
+        a {
+            color: #1a0dab;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 10px;
+        }
+        th, td {
+            border-bottom: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+            font-size: 14px;
+        }
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+        .column {
+            flex: 1;
+            padding: 10px;
+            min-width: 300px;
+        }
+        .header-links {
+            margin: 5px 0 20px;
+        }
+        .header-links a {
+            margin-right: 15px;
+        }
+        .activity-img {
+            width: 100%;
+            max-width: 500px;
+        }
+    </style>
 </head>
 <body>
-  <a href="#" class="button">Get My Own Profile</a>
+<div class="container">
+    <h1>Azadeh Khoddami</h1>
+    <div>
+        <p>
+            Senior Research Developer – <a href="https://www.public-health.uiowa.edu/ctsdmc/" target="_blank">CTSDMC</a>,
+            <a href="https://www.public-health.uiowa.edu/" target="_blank">College of Public Health, University of Iowa</a>
+        </p>
+        <div class="header-links">
+            <a href="https://github.com/AzadehKh">GitHub</a> ·
+            <a href="https://www.linkedin.com/in/azadehkh/">LinkedIn</a> ·
+            <a href="https://azadehkh.github.io/profile/">This Site</a>
+            <span style="float:right;">
+                <a href="#" style="border: 1px solid #333; padding: 4px 10px; border-radius: 5px;">Get My Own Profile</a>
+            </span>
+        </div>
+    </div>
 
-  <h1>Azadeh Khoddami</h1>
-  <p>Senior Research Developer – <a href="https://ctsdmc.public-health.uiowa.edu/">CTSDMC</a>, <a href="https://www.public-health.uiowa.edu/">College of Public Health, University of Iowa</a></p>
-  <p>
-    <a href="https://github.com/AzadehKh">GitHub</a> · 
-    <a href="https://www.linkedin.com/in/azadehkh/">LinkedIn</a> · 
-    <a href="https://azadehkh.github.io/profile">This Site</a>
-  </p>
-
-  <div class="container">
-    <div class="left-column">
-      <div class="section-title">Highlighted GitHub Projects</div>
-      <table>
+    <h2>Highlighted GitHub Projects</h2>
+    <table>
         <tr><th>Project</th><th>Tech Stack</th></tr>
-        <tr>
-          <td><a href="https://github.com/AzadehKh/ClinicalDataManager"><strong>ClinicalDataManager</strong></a><br>Open source ASP.NET Clinical Data Management system</td>
-          <td>ASP.NET, SQL Server, JS</td>
-        </tr>
-        <tr>
-          <td><a href="https://github.com/AzadehKh/patient-matching-of-clinical-trials-using-generative-ai"><strong>Patient Matching AI</strong></a><br>AI-based patient matching using generative models</td>
-          <td>Python, ML, HTML</td>
-        </tr>
-        <tr>
-          <td><a href="https://github.com/AzadehKh/clinical-trials-search-app"><strong>Clinical Trials Search App</strong></a><br>Search interface for browsing public clinical trials</td>
-          <td>JavaScript, API</td>
-        </tr>
-        <tr>
-          <td><a href="https://github.com/AzadehKh/AdminLTE"><strong>AdminLTE Dashboard</strong></a><br>Bootstrap-based UI template integration</td>
-          <td>Bootstrap, JS</td>
-        </tr>
-        <tr>
-          <td><a href="https://github.com/AzadehKh/clinicaltrialvis"><strong>Trial Visualization (ClinicalTrialVis)</strong></a><br>Frontend interface for trial status visualization</td>
-          <td>HTML, JS</td>
-        </tr>
-      </table>
-    </div>
+        <tr><td><a href="https://github.com/AzadehKh/ClinicalDataManager">ClinicalDataManager</a><br><span style="color:gray;">Open source ASP.NET Clinical Data Management system</span></td><td>ASP.NET, SQL Server, JS</td></tr>
+        <tr><td><a href="https://github.com/AzadehKh/patient-matching-of-clinical-trials-using-generative-ai">Patient Matching AI</a><br><span style="color:gray;">AI-based patient matching using generative models</span></td><td>Python, ML, HTML</td></tr>
+        <tr><td><a href="https://github.com/AzadehKh/clinical-trials-search-app">Clinical Trials Search App</a><br><span style="color:gray;">Search interface for browsing public clinical trials</span></td><td>JavaScript, API</td></tr>
+        <tr><td><a href="https://github.com/AzadehKh/AdminLTE">AdminLTE Dashboard</a><br><span style="color:gray;">Bootstrap-based UI template integration</span></td><td>Bootstrap, JS</td></tr>
+        <tr><td><a href="https://github.com/AzadehKh/clinicaltrialvis">Trial Visualization (ClinicalTrialVis)</a><br><span style="color:gray;">Frontend interface for trial status visualization</span></td><td>HTML, JS</td></tr>
+    </table>
 
-    <div class="right-column">
-      <div class="section-title">Recent GitHub Activity</div>
-      <img src="github_activity_realistic.png" alt="GitHub Activity Bar" style="width: 100%; max-width: 500px;" />
+    <div class="row">
+        <div class="column">
+            <h3>Project Availability</h3>
+            <ul>
+                <li>All GitHub projects listed here are <b>publicly accessible</b>.</li>
+                <li>Each repository includes <b>live code</b>, documentation, and sample data where applicable.</li>
+                <li>Forks were adapted to match clinical research needs, with added utility scripts and UI improvements.</li>
+            </ul>
 
-      <div class="section-title">Project Availability</div>
-      <ul>
-        <li>All GitHub projects listed here are <strong>publicly accessible</strong>.</li>
-        <li>Each repository includes <strong>live code</strong>, documentation, and sample data where applicable.</li>
-        <li>Forks were adapted to match clinical research needs, with added utility scripts and UI improvements.</li>
-      </ul>
+            <h3>Technical Expertise</h3>
+            <ul>
+                <li>Machine Learning · NLP · Causal Inference</li>
+                <li>ASP.NET Core · Entity Framework · SQL</li>
+                <li>Python · JavaScript · Bootstrap</li>
+                <li>ETL Pipelines · GitHub Actions · APIs</li>
+            </ul>
 
-      <div class="tech-columns">
-        <div class="tech-column">
-          <div class="section-title">Technical Expertise</div>
-          <ul>
-            <li>Machine Learning · NLP · Causal Inference</li>
-            <li>ASP.NET Core · Entity Framework · SQL</li>
-            <li>Python · JavaScript · Bootstrap</li>
-            <li>ETL Pipelines · GitHub Actions · APIs</li>
-          </ul>
+            <h3>Development Focus Areas</h3>
+            <ul>
+                <li>Clinical Trial Platforms & eHealth Systems</li>
+                <li>AI for Patient Safety and Risk Reduction</li>
+                <li>Academic & Open-Source Integration</li>
+            </ul>
         </div>
-        <div class="tech-column">
-          <div class="section-title">Development Focus Areas</div>
-          <ul>
-            <li>Clinical Trial Platforms & eHealth Systems</li>
-            <li>AI for Patient Safety and Risk Reduction</li>
-            <li>Academic & Open-Source Integration</li>
-          </ul>
+        <div class="column">
+            <h3>Recent GitHub Activity</h3>
+            <img src="github_activity_realistic.png" alt="GitHub Activity Bar" class="activity-img">
         </div>
-      </div>
     </div>
-  </div>
+</div>
 </body>
 </html>
